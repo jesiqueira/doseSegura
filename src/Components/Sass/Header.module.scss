@@ -1,0 +1,93 @@
+$gradiente: linear-gradient(91deg, #453132 6.11%, #978585 100%);
+$ft_regular: 400;
+$ft_medium: 500;
+$corLogo: #cdcdcd;
+$ft_Roboto_Slab: 'Roboto Slab', serif;
+$ft_Poppins: 'Poppins', sans-serif;
+
+.header {
+  display: grid;
+  grid-template-areas: 'logo menu';
+  background: $gradiente;
+  padding: 20px;
+  font-family: $ft_Roboto_Slab;
+  // height: 139px;
+
+  a {
+    max-width: 21.875rem;
+  }
+
+  .logo {
+    grid-area: logo;
+    display: flex;
+
+    svg {
+      margin-left: 2rem;
+    }
+
+    h1 {
+      color: $corLogo;
+      font-size: 2.25rem;
+      font-weight: 500;
+      margin-left: 1rem;
+    }
+    span {
+      color: #e6583c;
+      font-size: 3rem;
+    }
+  }
+  .menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: $ft_regular;
+
+    a {
+      color: $corLogo;
+    }
+
+    a::after {
+      content: '';
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background: #826c6d;
+      display: inline-block;
+      box-shadow: 0 0 0 2px #978585;
+      margin-left: 2rem;
+      margin-bottom: 2px;
+      cursor: none;
+    }
+
+    a + a {
+      margin-left: 2rem;
+    }
+
+    a + button {
+      margin: 0px 2rem;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      width: 135px;
+      height: 50px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+      font-family: $ft_Poppins;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #453132;
+      background: #b4abab;
+
+      svg {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.header {
+  display: grid;
+  grid-template-areas: "logo menu";
+  background: linear-gradient(91deg, #453132 6.11%, #978585 100%);
+  padding: 20px;
+  font-family: "Roboto Slab", serif;
+}
+.header a {
+  max-width: 21.875rem;
+}
+.header .logo {
+  grid-area: logo;
+  display: flex;
+}
+.header .logo svg {
+  margin-left: 2rem;
+}
+.header .logo h1 {
+  color: #cdcdcd;
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.header .logo span {
+  color: #e6583c;
+  font-size: 3rem;
+}
+.header .menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.header .menu a {
+  color: #cdcdcd;
+}
+.header .menu a::after {
+  content: "";
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: #826c6d;
+  display: inline-block;
+  box-shadow: 0 0 0 2px #978585;
+  margin-left: 2rem;
+  margin-bottom: 2px;
+  cursor: none;
+}
+.header .menu a + a {
+  margin-left: 2rem;
+}
+.header .menu a + button {
+  margin: 0px 2rem;
+}
+.header .menu button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  width: 135px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #453132;
+  background: #b4abab;
+}
+.header .menu button svg {
+  margin-left: 1rem;
+}
+
+/*# sourceMappingURL=Header.module.css.map */
