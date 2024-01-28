@@ -29,6 +29,7 @@ a {
 }
 .app .container {
   flex: 1;
+  width: 100%;
 }
 
 /*# sourceMappingURL=App.module.css.map */

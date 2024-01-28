@@ -1,0 +1,18 @@
+.imagem {
+  max-width: 100%;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// .main {
+
+// }
+// MEDIA SCREEN - 75rem - 1200px
+@media only screen and (min-width: 55rem) and (max-width: 74.9rem) {
+  .main {
+    max-width: 75rem;
+    margin-inline: auto;
+  }
+}
