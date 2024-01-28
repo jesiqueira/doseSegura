@@ -2,7 +2,6 @@
   display: grid;
   grid-template-areas: "logo nav";
   background: linear-gradient(91deg, #453132 6.11%, #978585 100%);
-  padding: 20px;
   font-family: "Roboto Slab", serif;
 }
 .header a {
@@ -75,7 +74,7 @@
 }
 .header .mobileButton {
   position: relative;
-  margin: 16px 0px 0 auto;
+  margin: 16px 0px 0px auto;
   background: #b4abab;
   border-radius: 0.2rem;
   height: 40px;
@@ -157,9 +156,9 @@
 }
 
 /*MEDIA SCREEN - MOBILE */
-@media only screen and (max-width: 41.249rem) {
-  .header {
-    padding: 10px;
+@media only screen and (max-width: 54.99rem) {
+  .header .mobileButton {
+    margin-right: 1rem;
   }
   .header .logo svg {
     margin-left: 1rem;
@@ -174,7 +173,7 @@
     font-size: 2.5rem;
   }
   .header .navMobile {
-    top: 95px;
+    top: 75px;
   }
 }
 

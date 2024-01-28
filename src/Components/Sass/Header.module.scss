@@ -10,7 +10,7 @@ $ft_Poppins: 'Poppins', sans-serif;
   display: grid;
   grid-template-areas: 'logo nav';
   background: $gradiente;
-  padding: 20px;
+  // padding: 2px;
   font-family: $ft_Roboto_Slab;
   // height: 139px;
 
@@ -94,7 +94,7 @@ $ft_Poppins: 'Poppins', sans-serif;
 
   .mobileButton {
     position: relative;
-    margin: 16px 0px 0 auto;
+    margin: 16px 0px 0px auto;
     background: #b4abab;
     border-radius: 0.2rem;
     height: 40px;
@@ -185,9 +185,12 @@ $ft_Poppins: 'Poppins', sans-serif;
 }
 
 /*MEDIA SCREEN - MOBILE */
-@media only screen and (max-width: 41.249rem) {
+
+@media only screen and (max-width: 54.99rem) {
   .header {
-    padding: 10px;
+    .mobileButton {
+      margin-right: 1rem;
+    }
 
     .logo {
       svg {
@@ -206,7 +209,7 @@ $ft_Poppins: 'Poppins', sans-serif;
     }
 
     .navMobile {
-      top: 95px;
+      top: 75px;
     }
   }
 }
