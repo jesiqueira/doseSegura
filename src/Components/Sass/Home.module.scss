@@ -1,3 +1,9 @@
+$ft_regular: 400;
+$ft_medium: 500;
+$corLogo: #cdcdcd;
+$ft_Roboto_Serif: 'Roboto Serif', serif;
+$corFt_principal: #231718;
+
 .imagem {
   max-width: 100%;
 
@@ -6,13 +12,180 @@
   }
 }
 
-// .main {
+main {
+  max-width: 90rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-areas:
+    'titulo titulo'
+    'info_saude info_saude'
+    'hr hr'
+    'info_fruta info_fruta';
 
-// }
-// MEDIA SCREEN - 75rem - 1200px
+  padding: 0px 2rem;
+  margin-bottom: 8rem;
+
+  .titulo {
+    grid-area: titulo;
+    font-family: $ft_Roboto_Serif;
+    font-size: 3rem;
+    color: $corFt_principal;
+    font-weight: $ft_medium;
+    text-align: center;
+    margin: 8rem auto;
+  }
+  .hr {
+    grid-area: hr;
+    width: 80%;
+    height: 2px;
+    border: none;
+    margin: 3rem auto;
+    max-width: 100%;
+    background: #fafafa;
+  }
+
+  .info_saude {
+    grid-area: info_saude;
+    display: grid;
+    grid-template-areas: 'img paragrafo';
+    column-gap: 2rem;
+
+    .img {
+      max-width: 100%;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .paragrafo {
+      p {
+        font-family: $ft_Roboto_Serif;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        letter-spacing: 1px;
+      }
+      p + p {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .info_fruta {
+    grid-area: info_fruta;
+    display: grid;
+    grid-template-areas: 'paragrafo img';
+    column-gap: 2rem;
+
+    .paragrafo {
+      grid-area: paragrafo;
+      p {
+        font-family: $ft_Roboto_Serif;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        letter-spacing: 1px;
+      }
+      p + p {
+        margin-top: 2rem;
+      }
+    }
+
+    .img {
+      grid-area: img;
+      max-width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+
+// MEDIA SCREEN - 75rem  - 1200px
 @media only screen and (min-width: 55rem) and (max-width: 74.9rem) {
   .main {
     max-width: 75rem;
     margin-inline: auto;
+
+    .titulo {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+// MEDIA SCREEN
+@media only screen and (min-width: 41.25rem) and (max-width: 54.99rem) {
+  .main {
+    .titulo {
+      margin: 4rem auto;
+    }
+
+    .info_saude {
+      .paragrafo {
+        p {
+          font-size: 0.9rem;
+          line-height: 1.1rem;
+          letter-spacing: 1px;
+        }
+        p + p {
+          margin-top: 0.8rem;
+        }
+      }
+    }
+    .info_fruta {
+      .paragrafo {
+        p {
+          font-size: 0.9rem;
+          line-height: 1.1rem;
+          letter-spacing: 1px;
+        }
+        p + p {
+          margin-top: 0.8rem;
+        }
+      }
+    }
+  }
+}
+/*MEDIA SCREEN - MOBILE < 660px*/
+@media only screen and (max-width: 41.249rem) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    margin-bottom: 3rem;
+
+    .titulo {
+      font-size: 1rem;
+      margin: 2rem auto;
+    }
+
+    .info_saude {
+      grid-template-areas:
+        'img'
+        'paragrafo';
+
+      .img {
+        grid-area: img;
+        max-width: 100%;
+      }
+
+      .paragrafo {
+        grid-area: paragrafo;
+        margin-top: 1rem;
+      }
+    }
+
+    .info_fruta {
+      grid-template-areas:
+        'img'
+        'paragrafo';
+
+      .img {
+        grid-area: img;
+      }
+
+      .paragrafo {
+        grid-area: paragrafo;
+        margin-top: 1rem;
+      }
+    }
   }
 }
