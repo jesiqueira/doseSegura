@@ -2,12 +2,13 @@ $gradiente: linear-gradient(91deg, #453132 6.11%, #978585 100%);
 $ft_regular: 400;
 $ft_medium: 500;
 $corLogo: #cdcdcd;
+$corDestaque: #e6583c;
 $ft_Roboto_Slab: 'Roboto Slab', serif;
 $ft_Poppins: 'Poppins', sans-serif;
 
 .header {
   display: grid;
-  grid-template-areas: 'logo menu';
+  grid-template-areas: 'logo nav';
   background: $gradiente;
   padding: 20px;
   font-family: $ft_Roboto_Slab;
@@ -32,12 +33,12 @@ $ft_Poppins: 'Poppins', sans-serif;
       margin-left: 1rem;
     }
     span {
-      color: #e6583c;
+      color: $corDestaque;
       font-size: 3rem;
     }
   }
-  .menu {
-    grid-area: menu;
+  .nav {
+    grid-area: nav;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -88,6 +89,124 @@ $ft_Poppins: 'Poppins', sans-serif;
       svg {
         margin-left: 1rem;
       }
+    }
+  }
+
+  .mobileButton {
+    position: relative;
+    margin: 16px 0px 0 auto;
+    background: #b4abab;
+    border-radius: 0.2rem;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: 0.1s;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1.2rem;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      box-shadow: 0 6px currentColor, 0 -6px currentColor;
+      transition: 0.2s;
+    }
+
+    &:focus,
+    &:hover,
+    .mobileButtonActive {
+      outline: none;
+      background: #fafafa;
+      box-shadow: 0 0 0 3px #fa9784;
+      border-color: $corDestaque;
+      color: $corDestaque;
+
+      &::after {
+        transform: rotate(-90deg);
+        width: 4px;
+        height: 4px;
+        box-shadow: 0 8px currentColor, 0 -8px currentColor;
+      }
+    }
+  }
+
+  .navMobile {
+    display: block;
+    position: absolute;
+    top: 115px;
+    right: 0px;
+    padding: 0 1rem;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+    transform: translateX(-10px);
+    opacity: 0;
+    pointer-events: none;
+
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      background: none;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #eee;
+      padding: 0.5rem 0;
+      cursor: pointer;
+      color: #453132;
+    }
+
+    a:hover svg > *,
+    button:hover svg > * {
+      fill: $corDestaque;
+    }
+
+    button {
+      border-bottom: none;
+    }
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .navMobileActive {
+    transition: 0.3s;
+    transform: initial;
+    opacity: 1;
+    z-index: 100;
+    pointer-events: initial;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 41.249rem) {
+  .header {
+    padding: 10px;
+
+    .logo {
+      svg {
+        margin-left: 1rem;
+        width: 40px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-left: 0.5rem;
+        margin-top: 10px;
+      }
+      span {
+        font-size: 2.5rem;
+      }
+    }
+
+    .navMobile {
+      top: 95px;
     }
   }
 }

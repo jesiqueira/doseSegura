@@ -2,9 +2,21 @@ import styles from './Header.module.css'
 import React from 'react'
 import { ReactComponent as ComprimidoLogo } from '../Assets/logo.svg'
 import { ReactComponent as Seta } from '../Assets/seta.svg'
-import { NavLink } from 'react-router-dom'
+import { ReactComponent as Home } from '../Assets/home.svg'
+import { ReactComponent as Info } from '../Assets/info.svg'
+import { ReactComponent as Login } from '../Assets/login.svg'
+import { NavLink, useLocation } from 'react-router-dom'
+import useMedia from '../Hooks/useMedia'
 
 const Header = () => {
+  const mobile = useMedia('(max-width: 55rem)')
+  const [mobileMenu, setMobileMenu] = React.useState(false)
+  const { pathname } = useLocation()
+
+  React.useEffect(() => {
+    setMobileMenu(false)
+  }, [pathname])
+
   return (
     <header className={styles.header}>
       <NavLink to="/" className={styles.logo}>
@@ -13,11 +25,18 @@ const Header = () => {
           DOSE<span>S</span>EGURA
         </h1>
       </NavLink>
-      <nav className={styles.menu}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/sobre">Sobre</NavLink>
+      {mobile && (
+        <button
+          aria-label="Menu"
+          className={`${styles.mobileButton} ${mobileMenu && styles.mobileButtonActive}`}
+          onClick={() => setMobileMenu(!mobileMenu)}
+        ></button>
+      )}
+      <nav className={`${mobile ? styles.navMobile : styles.nav} ${mobileMenu && styles.navMobileActive}`}>
+        <NavLink to="/">{mobile && <Home />}Home</NavLink>
+        <NavLink to="/sobre">{mobile && <Info />}Sobre</NavLink>
         <button>
-          LOGIN <Seta />
+          {mobile && <Login />}LOGIN {!mobile && <Seta />}
         </button>
       </nav>
     </header>
