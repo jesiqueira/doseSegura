@@ -1,0 +1,146 @@
+.imagem {
+  max-width: 100%;
+}
+.imagem img {
+  max-width: 100%;
+}
+
+main {
+  max-width: 90rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-areas: "titulo titulo" "info_saude info_saude" "hr hr" "info_fruta info_fruta";
+  padding: 0px 2rem;
+  margin-bottom: 8rem;
+}
+main .titulo {
+  grid-area: titulo;
+  font-family: "Roboto Serif", serif;
+  font-size: 3rem;
+  color: #231718;
+  font-weight: 500;
+  text-align: center;
+  margin: 8rem auto;
+}
+main .hr {
+  grid-area: hr;
+  width: 80%;
+  height: 2px;
+  border: none;
+  margin: 3rem auto;
+  max-width: 100%;
+  background: #fafafa;
+}
+main .info_saude {
+  grid-area: info_saude;
+  display: grid;
+  grid-template-areas: "img paragrafo";
+  column-gap: 2rem;
+}
+main .info_saude .img {
+  max-width: 100%;
+}
+main .info_saude .img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+main .info_saude .paragrafo p {
+  font-family: "Roboto Serif", serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+}
+main .info_saude .paragrafo p + p {
+  margin-top: 2rem;
+}
+main .info_fruta {
+  grid-area: info_fruta;
+  display: grid;
+  grid-template-areas: "paragrafo img";
+  column-gap: 2rem;
+}
+main .info_fruta .paragrafo {
+  grid-area: paragrafo;
+}
+main .info_fruta .paragrafo p {
+  font-family: "Roboto Serif", serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+}
+main .info_fruta .paragrafo p + p {
+  margin-top: 2rem;
+}
+main .info_fruta .img {
+  grid-area: img;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 55rem) and (max-width: 74.9rem) {
+  .main {
+    max-width: 75rem;
+    margin-inline: auto;
+  }
+  .main .titulo {
+    font-size: 2.6rem;
+  }
+}
+@media only screen and (min-width: 41.25rem) and (max-width: 54.99rem) {
+  .main .titulo {
+    margin: 4rem auto;
+  }
+  .main .info_saude .paragrafo p {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .main .info_saude .paragrafo p + p {
+    margin-top: 0.8rem;
+  }
+  .main .info_fruta .paragrafo p {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .main .info_fruta .paragrafo p + p {
+    margin-top: 0.8rem;
+  }
+}
+/*MEDIA SCREEN - MOBILE < 660px*/
+@media only screen and (max-width: 41.249rem) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    margin-bottom: 3rem;
+  }
+  .main .titulo {
+    font-size: 1rem;
+    margin: 2rem auto;
+  }
+  .main .info_saude {
+    grid-template-areas: "img" "paragrafo";
+  }
+  .main .info_saude .img {
+    grid-area: img;
+    max-width: 100%;
+  }
+  .main .info_saude .paragrafo {
+    grid-area: paragrafo;
+    margin-top: 1rem;
+  }
+  .main .info_fruta {
+    grid-template-areas: "img" "paragrafo";
+  }
+  .main .info_fruta .img {
+    grid-area: img;
+  }
+  .main .info_fruta .paragrafo {
+    grid-area: paragrafo;
+    margin-top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=Home.module.css.map */
