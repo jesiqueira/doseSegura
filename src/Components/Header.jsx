@@ -9,7 +9,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import useMedia from '../Hooks/useMedia'
 
 const Header = () => {
-  const mobile = useMedia('(max-width: 55rem)')
+  const mobile = useMedia('(max-width: 61.25rem)')
   const [mobileMenu, setMobileMenu] = React.useState(false)
   const { pathname } = useLocation()
 

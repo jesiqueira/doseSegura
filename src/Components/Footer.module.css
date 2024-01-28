@@ -11,7 +11,7 @@
   height: 60px;
   background: #695050;
   display: block;
-  margin-left: 120px;
+  margin-left: 100px;
   border-radius: 5px;
 }
 .footer .nav {
@@ -72,7 +72,7 @@
   margin-left: 1rem;
 }
 
-@media only screen and (min-width: 55rem) and (max-width: 75rem) {
+@media only screen and (min-width: 61.25rem) and (max-width: 75rem) {
   .footer {
     padding: 10px;
   }
@@ -83,7 +83,7 @@
     grid-template-areas: "desenvolvedor" "link";
   }
 }
-@media only screen and (min-width: 41.25rem) and (max-width: 54.99rem) {
+@media only screen and (min-width: 41.25rem) and (max-width: 61.249rem) {
   .footer {
     padding: 10px;
   }
