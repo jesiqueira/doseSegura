@@ -2,15 +2,46 @@ import React from 'react'
 import styles from './Footer.module.css'
 import { ReactComponent as Whatsapp } from '../Assets/Whats.svg'
 import { ReactComponent as Email } from '../Assets/email.svg'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Footer() {
+  const [pageHome, setPageHome] = React.useState(false)
+  const [pageSobre, setPageSobre] = React.useState(false)
+  const [pageCadastro, setPageCadastro] = React.useState(false)
+
+  const { pathname } = useLocation()
+
+  React.useEffect(() => {
+    if (pathname === '/') {
+      setPageSobre(false)
+      setPageCadastro(false)
+      setPageHome(true)
+    } else if (pathname === '/sobre') {
+      setPageHome(false)
+      setPageCadastro(false)
+      setPageSobre(true)
+    } else if (pathname === '/cadastro') {
+      setPageHome(false)
+      setPageSobre(false)
+      setPageCadastro(true)
+    } else {
+      setPageHome(false)
+      setPageSobre(false)
+      setPageCadastro(false)
+    }
+  }, [pathname])
   return (
     <div className={styles.footer}>
       <nav className={styles.nav}>
-        <Link to="/">Home</Link>
-        <Link to="/sobre">Sobre</Link>
-        <Link to="/cadastro">Cadastro</Link>
+        <Link to="/" className={`${pageHome ? styles.detalhe : ''}`}>
+          Home
+        </Link>
+        <Link to="/sobre" className={`${pageSobre ? styles.detalhe : ''}`}>
+          Sobre
+        </Link>
+        <Link to="/cadastro" className={`${pageCadastro ? styles.detalhe : ''}`}>
+          Cadastro
+        </Link>
       </nav>
       <div className={styles.contato}>
         <h1 className={styles.desenvolvedor}>

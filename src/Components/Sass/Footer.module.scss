@@ -39,6 +39,10 @@ $corFt_principal: #231718;
       padding: 10px;
     }
 
+    a:hover {
+      color: #fafafa;
+    }
+
     a + a::before {
       content: '';
       width: 5px;
@@ -51,6 +55,10 @@ $corFt_principal: #231718;
     }
     a + a {
       margin-left: 1rem;
+    }
+
+    .detalhe {
+      color: #e6583c;
     }
   }
 
@@ -87,7 +95,12 @@ $corFt_principal: #231718;
         svg {
           margin-right: 0.5rem;
         }
+
+        &:hover {
+          color: #fafafa;
+        }
       }
+
       a + a {
         margin-left: 1rem;
       }

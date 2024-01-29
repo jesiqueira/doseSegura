@@ -11,10 +11,22 @@ import useMedia from '../Hooks/useMedia'
 const Header = () => {
   const mobile = useMedia('(max-width: 61.25rem)')
   const [mobileMenu, setMobileMenu] = React.useState(false)
+  const [pageHome, setPageHome] = React.useState(false)
+  const [pageSobre, setPageSobre] = React.useState(false)
   const { pathname } = useLocation()
 
   React.useEffect(() => {
     setMobileMenu(false)
+    if (pathname === '/') {
+      setPageSobre(false)
+      setPageHome(true)
+    } else if (pathname === '/sobre') {
+      setPageHome(false)
+      setPageSobre(true)
+    } else {
+      setPageHome(false)
+      setPageSobre(false)
+    }
   }, [pathname])
 
   return (
@@ -33,8 +45,12 @@ const Header = () => {
         ></button>
       )}
       <nav className={`${mobile ? styles.navMobile : styles.nav} ${mobileMenu && styles.navMobileActive}`}>
-        <NavLink to="/">{mobile && <Home />}Home</NavLink>
-        <NavLink to="/sobre">{mobile && <Info />}Sobre</NavLink>
+        <NavLink to="/" className={`${pageHome ? styles.detalhe : ''}`}>
+          {mobile && <Home />}Home
+        </NavLink>
+        <NavLink to="/sobre" className={`${pageSobre ? styles.detalhe : ''}`}>
+          {mobile && <Info />}Sobre
+        </NavLink>
         <button>
           {mobile && <Login />}LOGIN {!mobile && <Seta />}
         </button>

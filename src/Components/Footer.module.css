@@ -24,6 +24,9 @@
   color: #cdcdcd;
   padding: 10px;
 }
+.footer .nav a:hover {
+  color: #fafafa;
+}
 .footer .nav a + a::before {
   content: "";
   width: 5px;
@@ -36,6 +39,9 @@
 }
 .footer .nav a + a {
   margin-left: 1rem;
+}
+.footer .nav .detalhe {
+  color: #e6583c;
 }
 .footer .contato {
   grid-area: contato;
@@ -67,6 +73,9 @@
 }
 .footer .contato .link a svg {
   margin-right: 0.5rem;
+}
+.footer .contato .link a:hover {
+  color: #fafafa;
 }
 .footer .contato .link a + a {
   margin-left: 1rem;

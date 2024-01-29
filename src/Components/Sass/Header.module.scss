@@ -49,6 +49,10 @@ $ft_Poppins: 'Poppins', sans-serif;
       color: $corLogo;
     }
 
+    a:hover {
+      color: #e8e8e8;
+    }
+
     a::after {
       content: '';
       height: 5px;
@@ -86,9 +90,25 @@ $ft_Poppins: 'Poppins', sans-serif;
       color: #453132;
       background: #b4abab;
 
+      &:hover {
+        // color: #e8e8e8;
+        background: #e8e8e8;
+      }
+
       svg {
         margin-left: 1rem;
       }
+    }
+
+    .detalhe::before {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 68px;
+      margin-top: 30px;
+      display: block;
+      border-radius: 5px;
+      background: #e6583c;
     }
   }
 
@@ -186,7 +206,7 @@ $ft_Poppins: 'Poppins', sans-serif;
 
 /*MEDIA SCREEN - MOBILE */
 
-// @media only screen and (max-width: 54.99rem) {
+// @media only screen and (max-width: 61.25rem) {
 @media only screen and (max-width: 61.25rem) {
   .header {
     .mobileButton {
