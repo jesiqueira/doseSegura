@@ -1,22 +1,44 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Components/Home/Home'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
 import styles from './App.module.css'
 import Sobre from './Components/Sobre/Sobre'
+import Cadastro from './Components/Usuario/Cadastro'
+import DefaultLayout from './Components/Layout/DefaultLayout'
+import NoHeaderFooterLayout from './Components/Layout/NoHeaderFooterLayout'
 
 function App() {
   return (
     <div className={styles.app}>
       <BrowserRouter>
-        <Header />
         <div className={styles.container}>
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="sobre" element={<Sobre />}></Route>
+            <Route
+              path="/"
+              element={
+                <DefaultLayout>
+                  <Home />
+                </DefaultLayout>
+              }
+            />
+            <Route
+              path="sobre"
+              element={
+                <DefaultLayout>
+                  <Sobre />
+                </DefaultLayout>
+              }
+            />
+
+            <Route
+              path="cadastro"
+              element={
+                <NoHeaderFooterLayout>
+                  <Cadastro />
+                </NoHeaderFooterLayout>
+              }
+            />
           </Routes>
         </div>
-        <Footer />
       </BrowserRouter>
     </div>
   )
