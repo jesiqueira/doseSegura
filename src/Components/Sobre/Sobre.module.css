@@ -1,0 +1,46 @@
+.main {
+  font-family: "Roboto Serif", serif;
+  font-size: 1.3125rem;
+  font-weight: 500;
+  color: #231718;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  padding: 0px 8rem;
+  max-width: 90rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.main h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin: 8rem 0px 4rem 0px;
+}
+.main .info_paragrafo p {
+  font-size: 1rem;
+}
+.main .info_paragrafo p + p {
+  margin-top: 17px;
+}
+.main .info_paragrafo p:last-child {
+  margin-bottom: 8rem;
+}
+
+/*MEDIA SCREEN - MOBILE < 660px*/
+@media only screen and (max-width: 41.249rem) {
+  .main {
+    max-width: 41rem;
+    margin-inline: auto;
+    padding: 0px 2rem;
+  }
+  .main h1 {
+    font-size: 2rem;
+    margin: 4rem 0px 2rem 0px;
+  }
+  .main .info_paragrafo p:last-child {
+    margin-bottom: 4rem;
+  }
+}
+
+/*# sourceMappingURL=Sobre.module.css.map */
