@@ -1,0 +1,34 @@
+$gradiente: linear-gradient(91deg, #453132 6.11%, #978585 100%);
+$ft_regular: 400;
+$ft_medium: 500;
+$corLogo: #cdcdcd;
+$corDestaque: #e6583c;
+$ft_Roboto_Slab: 'Roboto Slab', serif;
+$ft_Poppins: 'Poppins', sans-serif;
+
+.button {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: $ft_Roboto_Slab;
+  font-weight: $ft_regular;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background: $gradiente;
+  color: $corLogo;
+  border: none;
+  min-width: 8rem;
+  padding: 0.8rem 2rem;
+  box-sizing: border-box;
+  transition: 0.1s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #ffbcae, 0 0 0 4px #e6583c;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: wait;
+  }
+}

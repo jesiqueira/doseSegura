@@ -7,7 +7,7 @@ const Input = ({ label, type, name, placeholder, value, onChange, onBlur, error 
       <label htmlFor={name} className={styles.label}>
         {label}
       </label>
-      <input type={type} id={name} placeholder={placeholder} value={value} onChange={onChange} onBlur={onBlur} />
+      <input type={type} id={name} placeholder={placeholder} value={value} onChange={onChange} onBlur={onBlur} className={styles.input} />
       {error && <p className={styles.error}>{error}</p>}
     </div>
   )

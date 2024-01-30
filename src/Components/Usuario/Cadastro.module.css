@@ -1,5 +1,40 @@
 .main {
-  color: green;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1rf;
+  max-width: 100vh;
+}
+.main h1 {
+  font-size: 2rem;
+  color: #7d1e0b;
+  text-align: center;
+  margin-top: 8rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+.main .box {
+  margin-top: 8rem;
+  padding: 2rem;
+  background: #cdcdcd;
+  border-radius: 5px;
+}
+.main .box h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  color: #231718;
+  font-size: 2rem;
+}
+.main .box p {
+  margin-top: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  color: #231718;
+}
+.main .box .form {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
 }
 
 /*# sourceMappingURL=Cadastro.module.css.map */

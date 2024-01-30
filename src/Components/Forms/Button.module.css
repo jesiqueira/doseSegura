@@ -1,3 +1,26 @@
-
+.button {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(91deg, #453132 6.11%, #978585 100%);
+  color: #cdcdcd;
+  border: none;
+  min-width: 8rem;
+  padding: 0.8rem 2rem;
+  box-sizing: border-box;
+  transition: 0.1s;
+}
+.button:hover, .button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffbcae, 0 0 0 4px #e6583c;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
 
 /*# sourceMappingURL=Button.module.css.map */

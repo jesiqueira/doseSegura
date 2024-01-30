@@ -1,3 +1,32 @@
-
+.wrapper {
+  margin-bottom: 1rem;
+}
+.wrapper .label {
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+}
+.wrapper .input {
+  border: 1px solid #eee;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  background: #eee;
+  text-transform: uppercase;
+  transition: 0.1s;
+  color: #604b4c;
+}
+.wrapper .input:focus, .wrapper .input:hover {
+  outline: none;
+  border-color: #c74228;
+  background: #e8e8e8;
+  box-shadow: 0 0 0 3px #ffbcae;
+}
+.wrapper .input::placeholder {
+  color: #604b4c;
+}
 
 /*# sourceMappingURL=Input.module.css.map */
