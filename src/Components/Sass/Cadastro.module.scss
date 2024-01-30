@@ -44,7 +44,38 @@ $ft_Poppins: 'Poppins', sans-serif;
       margin-top: 2rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 20px;
+      column-gap: 2rem;
+      row-gap: 1rem;
+
+      .button {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+
+        button {
+          min-width: 20rem;
+        }
+      }
+
+      .termo {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        p {
+          margin: 0px 0px 0px 6rem;
+
+          a {
+            color: #7d1e0b;
+            margin-left: 0.5rem;
+          }
+        }
+        span {
+          color: #7d1e0b;
+        }
+      }
     }
   }
 }

@@ -30,7 +30,7 @@ function App() {
             />
 
             <Route
-              path="cadastro"
+              path="cadastro/*"
               element={
                 <NoHeaderFooterLayout>
                   <Cadastro />

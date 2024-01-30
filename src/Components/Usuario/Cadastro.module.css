@@ -34,7 +34,33 @@
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 20px;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.main .box .form .button {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.main .box .form .button button {
+  min-width: 20rem;
+}
+.main .box .form .termo {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.main .box .form .termo p {
+  margin: 0px 0px 0px 6rem;
+}
+.main .box .form .termo p a {
+  color: #7d1e0b;
+  margin-left: 0.5rem;
+}
+.main .box .form .termo span {
+  color: #7d1e0b;
 }
 
 /*# sourceMappingURL=Cadastro.module.css.map */
