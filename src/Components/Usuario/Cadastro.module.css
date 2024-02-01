@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1rf;
   max-width: 100vh;
+  padding: 20px;
 }
 .main h1 {
   font-size: 2rem;
@@ -45,15 +46,20 @@
 }
 .main .box .form .button button {
   min-width: 20rem;
+  letter-spacing: 1px;
 }
 .main .box .form .termo {
   grid-column: 1/-1;
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  letter-spacing: 1px;
+}
+.main .box .form .termo .ckeck input:first-child {
+  border: none;
 }
 .main .box .form .termo p {
-  margin: 0px 0px 0px 6rem;
+  margin: 0px 0px 0px 4.8rem;
 }
 .main .box .form .termo p a {
   color: #7d1e0b;
@@ -61,6 +67,193 @@
 }
 .main .box .form .termo span {
   color: #7d1e0b;
+  cursor: pointer;
+}
+
+.modalContainer {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  height: 100vh;
+}
+.modalContainer.mostrar {
+  display: flex;
+}
+.modalContainer .modal {
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: "Roboto Serif", serif;
+  justify-items: center;
+  align-items: center;
+  background: #fafafa;
+  width: 80%;
+  padding: 20px;
+  border: 10px solid #e6583c;
+  box-shadow: 0 0 0 10px #fafafa;
+  position: relative;
+  animation: modal 0.3s;
+}
+.modalContainer .modal .fechar {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #fafafa;
+  background: #e6583c;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1.2em;
+}
+.modalContainer .modal h2 {
+  margin-top: 1rem;
+  color: #231718;
+  font-weight: 600;
+  align-items: center;
+}
+.modalContainer .modal .termo {
+  padding: 20px;
+  margin: 0px 8rem;
+}
+.modalContainer .modal .termo p {
+  font-weight: 500;
+  line-height: 1.5;
+}
+.modalContainer .modal .termo p + p {
+  margin-top: 1rem;
+}
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media only screen and (min-width: 75rem) and (max-width: 101.25rem) {
+  .modalContainer .modal {
+    width: 80%;
+    padding: 10px;
+  }
+  .modalContainer .modal h2 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+  .modalContainer .modal .termo {
+    padding: 20px;
+    margin: 0px 0.9rem;
+  }
+  .modalContainer .modal .termo p {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  .modalContainer .modal .termo p + p {
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (min-width: 61.25rem) and (max-width: 74.99rem) {
+  .modalContainer .modal {
+    width: 80%;
+    padding: 10px;
+  }
+  .modalContainer .modal h2 {
+    font-size: 1.4rem;
+  }
+  .modalContainer .modal .termo {
+    margin: 0px 0.9rem;
+  }
+  .modalContainer .modal .termo p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+  .modalContainer .modal .termo p + p {
+    margin-top: 0.7rem;
+  }
+}
+@media only screen and (min-width: 41.25rem) and (max-width: 61.249rem) {
+  .modalContainer .modal {
+    width: 80%;
+    padding: 10px;
+  }
+  .modalContainer .modal h2 {
+    font-size: 0.9rem;
+  }
+  .modalContainer .modal .termo {
+    margin: 0px 1rem;
+  }
+  .modalContainer .modal .termo p {
+    line-height: 1.5;
+    font-size: 0.7rem;
+  }
+  .modalContainer .modal .termo p + p {
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 41.249rem) {
+  .main h1 {
+    margin-top: 5rem;
+  }
+  .main .box {
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 5px;
+  }
+  .main .box h2 {
+    color: #231718;
+    font-size: 2rem;
+  }
+  .main .box p {
+    margin-top: 1rem;
+    color: #231718;
+  }
+  .main .box .form {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.4rem;
+  }
+  .main .box .form .termo {
+    margin-top: 1rem;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+  }
+  .main .box .form .termo p {
+    margin: 0px 0px 0px 1.8rem;
+  }
+  .main .box .form .termo p a {
+    color: #7d1e0b;
+    margin-left: 0.1rem;
+  }
+  .modalContainer .modal {
+    width: 80%;
+    padding: 10px;
+  }
+  .modalContainer .modal h2 {
+    font-size: 0.5rem;
+  }
+  .modalContainer .modal .termo {
+    margin: 0px 0.7rem;
+  }
+  .modalContainer .modal .termo p {
+    font-size: 0.5rem;
+    line-height: 1.6;
+  }
+  .modalContainer .modal .termo p + p {
+    margin-top: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=Cadastro.module.css.map */
