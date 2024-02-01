@@ -5,6 +5,9 @@ import Button from '../Forms/Button'
 import { Link } from 'react-router-dom'
 
 const UsuarioCadastro = () => {
+  const handleTermo = () => {
+    console.log('Termo')
+  }
   return (
     <main className={styles.main}>
       <h1>Bem vindo(a) a DoseSegura</h1>
@@ -20,7 +23,7 @@ const UsuarioCadastro = () => {
           </div>
           <div className={styles.termo}>
             <label htmlFor="check">
-              <input type="checkbox" id="check" /> LI E ACEITO O <span>TERMO</span>
+              <input type="checkbox" id="check" /> LI E ACEITO O <span onClick={handleTermo}>TERMO</span>
             </label>
             <p>
               JÁ TEM UMA CONTA?
