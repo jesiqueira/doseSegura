@@ -1,9 +1,11 @@
 .main {
   margin-inline: auto;
   display: grid;
-  grid-template-columns: 1rf;
-  max-width: 100vh;
+  grid-template-columns: 1fr;
+  max-width: 60rem;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .main h1 {
   font-size: 2rem;
@@ -59,7 +61,7 @@
   border: none;
 }
 .main .box .form .termo p {
-  margin: 0px 0px 0px 4.8rem;
+  margin: 0px 0px 0px 5rem;
 }
 .main .box .form .termo p a {
   color: #7d1e0b;
@@ -202,18 +204,21 @@
     margin-top: 0.5rem;
   }
 }
-@media only screen and (max-width: 41.249rem) {
+@media only screen and (min-width: 24.375rem) and (max-width: 41.249rem) {
+  .main {
+    padding: 0px 15px;
+  }
   .main h1 {
     margin-top: 5rem;
   }
   .main .box {
     margin-top: 5rem;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 5px;
   }
   .main .box h2 {
     color: #231718;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .main .box p {
     margin-top: 1rem;
@@ -224,6 +229,12 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 0.4rem;
+  }
+  .main .box .form .button {
+    margin-top: 1rem;
+  }
+  .main .box .form .button button {
+    min-width: 18rem;
   }
   .main .box .form .termo {
     margin-top: 1rem;
@@ -249,6 +260,69 @@
   }
   .modalContainer .modal .termo p {
     font-size: 0.5rem;
+    line-height: 1.6;
+  }
+  .modalContainer .modal .termo p + p {
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 24.3749rem) {
+  .main {
+    padding: 0px 15px;
+  }
+  .main h1 {
+    margin-top: 1.5rem;
+  }
+  .main .box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  .main .box h2 {
+    color: #231718;
+    font-size: 1.5rem;
+  }
+  .main .box p {
+    margin-top: 1rem;
+    color: #231718;
+  }
+  .main .box .form {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.4rem;
+  }
+  .main .box .form .button {
+    margin-top: 1rem;
+  }
+  .main .box .form .button button {
+    min-width: 18rem;
+  }
+  .main .box .form .termo {
+    margin-top: 1rem;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+  }
+  .main .box .form .termo p {
+    margin: 0px 0px 0px 1.8rem;
+  }
+  .main .box .form .termo p a {
+    color: #7d1e0b;
+    margin-left: 0.1rem;
+  }
+  .modalContainer .modal {
+    width: 90%;
+    padding: 10px;
+  }
+  .modalContainer .modal h2 {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+  .modalContainer .modal .termo {
+    margin: 0px 0.7rem;
+  }
+  .modalContainer .modal .termo p {
+    font-size: 0.4rem;
     line-height: 1.6;
   }
   .modalContainer .modal .termo p + p {
