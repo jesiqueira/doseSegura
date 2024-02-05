@@ -38,7 +38,8 @@
 .header .nav a:hover {
   color: #e8e8e8;
 }
-.header .nav a::after {
+.header .nav a:nth-child(1)::after,
+.header .nav a:nth-child(2)::after {
   content: "";
   height: 5px;
   width: 5px;
@@ -53,15 +54,14 @@
 .header .nav a + a {
   margin-left: 2rem;
 }
-.header .nav a + button {
+.header .nav a:last-child {
   margin: 0px 2rem;
 }
-.header .nav button {
+.header .nav a:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  width: 135px;
   height: 50px;
   border-radius: 5px;
   cursor: pointer;
@@ -72,10 +72,10 @@
   color: #453132;
   background: #b4abab;
 }
-.header .nav button:hover {
+.header .nav a:last-child:hover {
   background: #e8e8e8;
 }
-.header .nav button svg {
+.header .nav a:last-child svg {
   margin-left: 1rem;
 }
 .header .nav .detalhe::before {
@@ -141,8 +141,7 @@
   opacity: 0;
   pointer-events: none;
 }
-.header .navMobile a,
-.header .navMobile button {
+.header .navMobile a {
   display: flex;
   align-items: center;
   background: none;
@@ -153,11 +152,10 @@
   cursor: pointer;
   color: #453132;
 }
-.header .navMobile a:hover svg > *,
-.header .navMobile button:hover svg > * {
+.header .navMobile a:hover svg > * {
   fill: #e6583c;
 }
-.header .navMobile button {
+.header .navMobile a:last-child {
   border-bottom: none;
 }
 .header .navMobile svg {

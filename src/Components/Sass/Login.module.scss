@@ -1,0 +1,98 @@
+$ft_Roboto_Slab: 'Roboto Slab', serif;
+$ft_Roboto: 'Roboto', sans-serif;
+
+.container {
+  padding: 20px;
+  .main {
+    background: #cdcdcd;
+    display: grid;
+    grid-template-areas:
+      'titulo'
+      'form'
+      'reset'
+      'cadastro';
+    width: 34rem;
+    height: 37rem;
+    margin-inline: auto;
+    padding: 20px;
+    margin-top: 11.44rem;
+    border-radius: 5px;
+
+    .titulo {
+      grid-area: titulo;
+      text-align: center;
+      margin-top: 4rem;
+      color: #231718;
+      font-family: $ft_Roboto_Slab;
+      span {
+        color: #9e2b14;
+      }
+    }
+    .form {
+      grid-area: form;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-inline: auto;
+      min-width: 25.38rem;
+      margin-top: 3rem;
+
+      input {
+        height: 64px;
+      }
+      div + div {
+        margin-top: 1rem;
+      }
+
+      button {
+        margin-top: 3rem;
+        height: 66px;
+      }
+    }
+    .reset {
+      grid-area: reset;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 45px;
+      margin-top: 1rem;
+      font-family: $ft_Roboto_Slab;
+
+      a {
+        color: #604b4c;
+      }
+    }
+    .cadastro {
+      grid-area: cadastro;
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+      font-family: $ft_Roboto;
+      font-weight: 700;
+
+      a {
+        color: #231718;
+      }
+      span {
+        color: #7d1e0b;
+      }
+    }
+  }
+}
+// @media only screen
+@media only screen and (max-width: 41.25rem) {
+  .container {
+    .main {
+      width: 100%;
+      margin-top: 10rem;
+      .form {
+        min-width: 100%;
+      }
+      .reset {
+        justify-content: flex-start;
+      }
+
+      .cadastro {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

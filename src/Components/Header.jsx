@@ -51,9 +51,9 @@ const Header = () => {
         <NavLink to="/sobre" className={`${pageSobre ? styles.detalhe : ''}`}>
           {mobile && <Info />}Sobre
         </NavLink>
-        <button>
+        <NavLink to="/login">
           {mobile && <Login />}LOGIN {!mobile && <Seta />}
-        </button>
+        </NavLink>
       </nav>
     </header>
   )

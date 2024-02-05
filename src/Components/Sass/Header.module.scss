@@ -53,7 +53,8 @@ $ft_Poppins: 'Poppins', sans-serif;
       color: #e8e8e8;
     }
 
-    a::after {
+    a:nth-child(1)::after,
+    a:nth-child(2)::after {
       content: '';
       height: 5px;
       width: 5px;
@@ -70,16 +71,15 @@ $ft_Poppins: 'Poppins', sans-serif;
       margin-left: 2rem;
     }
 
-    a + button {
+    a:last-child {
       margin: 0px 2rem;
     }
 
-    button {
+    a:last-child {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 10px 20px;
-      width: 135px;
       height: 50px;
       border-radius: 5px;
       cursor: pointer;
@@ -134,7 +134,9 @@ $ft_Poppins: 'Poppins', sans-serif;
       height: 2px;
       border-radius: 2px;
       background: currentColor;
-      box-shadow: 0 6px currentColor, 0 -6px currentColor;
+      box-shadow:
+        0 6px currentColor,
+        0 -6px currentColor;
       transition: 0.2s;
     }
 
@@ -151,7 +153,9 @@ $ft_Poppins: 'Poppins', sans-serif;
         transform: rotate(-90deg);
         width: 4px;
         height: 4px;
-        box-shadow: 0 8px currentColor, 0 -8px currentColor;
+        box-shadow:
+          0 8px currentColor,
+          0 -8px currentColor;
       }
     }
   }
@@ -169,8 +173,7 @@ $ft_Poppins: 'Poppins', sans-serif;
     opacity: 0;
     pointer-events: none;
 
-    a,
-    button {
+    a {
       display: flex;
       align-items: center;
       background: none;
@@ -182,12 +185,11 @@ $ft_Poppins: 'Poppins', sans-serif;
       color: #453132;
     }
 
-    a:hover svg > *,
-    button:hover svg > * {
+    a:hover svg > * {
       fill: $corDestaque;
     }
 
-    button {
+    a:last-child {
       border-bottom: none;
     }
     svg {

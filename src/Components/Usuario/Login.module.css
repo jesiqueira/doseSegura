@@ -1,0 +1,85 @@
+.container {
+  padding: 20px;
+}
+.container .main {
+  background: #cdcdcd;
+  display: grid;
+  grid-template-areas: "titulo" "form" "reset" "cadastro";
+  width: 34rem;
+  height: 37rem;
+  margin-inline: auto;
+  padding: 20px;
+  margin-top: 11.44rem;
+  border-radius: 5px;
+}
+.container .main .titulo {
+  grid-area: titulo;
+  text-align: center;
+  margin-top: 4rem;
+  color: #231718;
+  font-family: "Roboto Slab", serif;
+}
+.container .main .titulo span {
+  color: #9e2b14;
+}
+.container .main .form {
+  grid-area: form;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-inline: auto;
+  min-width: 25.38rem;
+  margin-top: 3rem;
+}
+.container .main .form input {
+  height: 64px;
+}
+.container .main .form div + div {
+  margin-top: 1rem;
+}
+.container .main .form button {
+  margin-top: 3rem;
+  height: 66px;
+}
+.container .main .reset {
+  grid-area: reset;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 45px;
+  margin-top: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+.container .main .reset a {
+  color: #604b4c;
+}
+.container .main .cadastro {
+  grid-area: cadastro;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.container .main .cadastro a {
+  color: #231718;
+}
+.container .main .cadastro span {
+  color: #7d1e0b;
+}
+
+@media only screen and (max-width: 41.25rem) {
+  .container .main {
+    width: 100%;
+    margin-top: 10rem;
+  }
+  .container .main .form {
+    min-width: 100%;
+  }
+  .container .main .reset {
+    justify-content: flex-start;
+  }
+  .container .main .cadastro {
+    justify-content: flex-start;
+  }
+}
+
+/*# sourceMappingURL=Login.module.css.map */

@@ -5,6 +5,8 @@ import Sobre from './Components/Sobre/Sobre'
 import Cadastro from './Components/Usuario/Cadastro'
 import DefaultLayout from './Components/Layout/DefaultLayout'
 import NoHeaderFooterLayout from './Components/Layout/NoHeaderFooterLayout'
+import Login from './Components/Usuario/Login'
+import Reset from './Components/Usuario/Reset'
 
 function App() {
   return (
@@ -28,12 +30,27 @@ function App() {
                 </DefaultLayout>
               }
             />
-
             <Route
               path="cadastro/*"
               element={
                 <NoHeaderFooterLayout>
                   <Cadastro />
+                </NoHeaderFooterLayout>
+              }
+            />{' '}
+            <Route
+              path="reset/*"
+              element={
+                <NoHeaderFooterLayout>
+                  <Reset />
+                </NoHeaderFooterLayout>
+              }
+            />
+            <Route
+              path="login/*"
+              element={
+                <NoHeaderFooterLayout>
+                  <Login />
                 </NoHeaderFooterLayout>
               }
             />
