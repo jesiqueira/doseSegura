@@ -7,6 +7,7 @@ import DefaultLayout from './Components/Layout/DefaultLayout'
 import NoHeaderFooterLayout from './Components/Layout/NoHeaderFooterLayout'
 import Login from './Components/Usuario/Login'
 import Reset from './Components/Usuario/Reset'
+import TrocarSenha from './Components/Usuario/TrocarSenha'
 
 function App() {
   return (
@@ -37,12 +38,20 @@ function App() {
                   <Cadastro />
                 </NoHeaderFooterLayout>
               }
-            />{' '}
+            />
             <Route
-              path="reset/*"
+              path="reset"
               element={
                 <NoHeaderFooterLayout>
                   <Reset />
+                </NoHeaderFooterLayout>
+              }
+            />
+            <Route
+              path="updatePassword"
+              element={
+                <NoHeaderFooterLayout>
+                  <TrocarSenha />
                 </NoHeaderFooterLayout>
               }
             />
