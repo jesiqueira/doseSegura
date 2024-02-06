@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container .main {
+  background: #cdcdcd;
+  padding: 40px;
+  border-radius: 5px;
+  font-family: "Roboto Slab", serif;
+}
+.container .main h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #231718;
+}
+.container .main .form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .form button {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 41.25rem) {
+  .container {
+    padding: 10px;
+  }
+  .container .main h1 {
+    font-size: 1.9rem;
+    text-wrap: nowrap;
+  }
+  .container .main .form {
+    margin-top: 2rem;
+  }
+}
+
+/*# sourceMappingURL=TrocarSenha.module.css.map */
