@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Cadastro.module.css'
+import styles from './Css/Cadastro.module.css'
 import Label from '../Forms/Input'
 import Button from '../Forms/Button'
 import { Link } from 'react-router-dom'

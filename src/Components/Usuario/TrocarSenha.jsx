@@ -1,7 +1,7 @@
 import React from 'react'
 import Input from '../Forms/Input'
 import Button from '../Forms/Button'
-import styles from './TrocarSenha.module.css'
+import styles from './Css/TrocarSenha.module.css'
 
 const TrocarSenha = () => {
   return (
