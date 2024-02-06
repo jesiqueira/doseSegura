@@ -28,4 +28,20 @@
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 41.25rem) {
+  .container {
+    padding: 10px;
+  }
+  .container .main {
+    padding: 0px 20px;
+  }
+  .container .main h1 {
+    font-size: 1.9rem;
+    text-wrap: nowrap;
+  }
+  .container .main .form {
+    margin-top: -20px;
+  }
+}
+
 /*# sourceMappingURL=Reset.module.css.map */

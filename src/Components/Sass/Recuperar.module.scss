@@ -36,3 +36,21 @@ $ft_Roboto_Slab: 'Roboto Slab', serif;
     }
   }
 }
+
+// @media only screen
+@media only screen and (max-width: 41.25rem) {
+  .container {
+    padding: 10px;
+    .main {
+      padding: 0px 20px;
+      h1 {
+        font-size: 1.9rem;
+        text-wrap: nowrap;
+      }
+
+      .form {
+        margin-top: -20px;
+      }
+    }
+  }
+}
