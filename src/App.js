@@ -8,6 +8,7 @@ import NoHeaderFooterLayout from './Components/Layout/NoHeaderFooterLayout'
 import Login from './Components/Usuario/Login'
 import Reset from './Components/Usuario/Reset'
 import TrocarSenha from './Components/Usuario/TrocarSenha'
+import Conta from './Components/Usuario/Conta'
 
 function App() {
   return (
@@ -28,6 +29,14 @@ function App() {
               element={
                 <DefaultLayout>
                   <Sobre />
+                </DefaultLayout>
+              }
+            />
+            <Route
+              path="usuario/*"
+              element={
+                <DefaultLayout>
+                  <Conta />
                 </DefaultLayout>
               }
             />

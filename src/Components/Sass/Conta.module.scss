@@ -1,0 +1,168 @@
+$ft_medium: 500;
+$ft_extraBold: 800;
+$ft_Roboto_Slab: 'Roboto Slab', serif;
+
+.container {
+  height: calc(100vh - 9rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .main {
+    display: grid;
+    grid-template-areas: 'menu content';
+    column-gap: 4rem;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-template-areas:
+      'titulo'
+      'form';
+    background: #cdcdcd;
+    border-radius: 5px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+
+    .titulo {
+      grid-area: titulo;
+      display: flex;
+      align-items: center;
+
+      h1 {
+        color: #231718;
+        font-family: $ft_Roboto_Slab;
+        font-size: 72px;
+        margin-left: 3rem;
+        text-wrap: nowrap;
+
+        &::after {
+          content: '';
+          height: 7px;
+          display: block;
+          background: #9e2b14;
+          margin-top: -9px;
+          border-radius: 5px;
+        }
+      }
+
+      svg > * {
+        fill: #9e2b14;
+      }
+    }
+    .form {
+      grid-area: form;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+
+      label {
+        font-family: $ft_Roboto_Slab;
+        font-weight: $ft_extraBold;
+        color: #231718;
+      }
+
+      .nome {
+        grid-column: 1;
+      }
+
+      .email {
+        grid-column: 2;
+      }
+
+      .password {
+        grid-column: 1;
+      }
+
+      .confpassword {
+        grid-column: 2;
+      }
+
+      .status {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .toggleContainer {
+          display: flex;
+          align-items: center;
+          /* margin-bottom: 1rem; */
+
+          .toggle {
+            display: none;
+            margin: 0px;
+          }
+
+          .toggleLabel {
+            width: 40px;
+            height: 20px;
+            background: #9e2b14;
+            display: inline-block;
+            position: relative;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 200ms;
+
+            &::before {
+              content: '';
+              width: 20px;
+              height: 20px;
+              background: green;
+              border-radius: 50%;
+              position: absolute;
+              left: 2px;
+              transition: 200ms;
+            }
+          }
+
+          .toggle:checked + .toggleLabel {
+            background: rgb(47, 189, 82);
+          }
+
+          /* Estilo para o botão toggle */
+          .toggle:checked + .toggleLabel::before {
+            left: calc(100% - 20px);
+            box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.1);
+          }
+
+          .description {
+            margin-left: 10px;
+          }
+        }
+        span {
+          color: #453132;
+          font-weight: 400;
+          cursor: pointer;
+        }
+
+        a {
+          color: #453132;
+          padding: 8px;
+        }
+      }
+      .button {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        height: 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 61.25rem) {
+  .container {
+    .main {
+      grid-template-areas:
+        'menu'
+        'content';
+      row-gap: 4rem;
+    }
+  }
+}

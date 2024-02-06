@@ -1,0 +1,43 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  background: #cdcdcd;
+  max-width: 172px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+
+  div + div {
+    margin-top: 1.2rem;
+  }
+
+  .menu_item {
+    a > svg {
+      height: 70px;
+      width: 70px;
+    }
+
+    .linkAtivo > svg > * {
+      fill: #9e2b14;
+    }
+  }
+}
+
+@media only screen and (max-width: 61.25rem) {
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+
+    div + div {
+      margin-left: 2.5rem;
+    }
+
+    .menu_item {
+      margin-top: 0px;
+    }
+  }
+}
