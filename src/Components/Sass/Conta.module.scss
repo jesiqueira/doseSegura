@@ -7,6 +7,7 @@ $ft_Roboto_Slab: 'Roboto Slab', serif;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 
   .main {
     display: grid;
@@ -163,6 +164,29 @@ $ft_Roboto_Slab: 'Roboto Slab', serif;
         'menu'
         'content';
       row-gap: 4rem;
+
+      // .menu{
+      //   overflow-x: auto;
+      // }
+    }
+  }
+}
+
+// @media only screen and (max-width: 61.25rem) and (max-width: 61.249rem)
+@media only screen and (max-width: 41.25rem)  {
+  .container {
+    .main {
+      .content {
+        .titulo {
+          svg{
+            width: 100px;
+          }
+          h1 {
+            font-size: 3rem;
+            color: red;
+          }
+        }
+      }
     }
   }
 }

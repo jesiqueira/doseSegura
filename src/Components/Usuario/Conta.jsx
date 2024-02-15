@@ -10,9 +10,7 @@ const Conta = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <div className={styles.menu}>
-          <Menu infoLocal="account" />
-        </div>
+        <Menu infoLocal="account" />
         <div className={styles.content}>
           <div className={styles.titulo}>
             <Account />

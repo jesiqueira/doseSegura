@@ -27,7 +27,7 @@
 @media only screen and (max-width: 61.25rem) {
   .menu {
     flex-direction: row;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     max-width: 100%;
     padding: 10px;
@@ -39,5 +39,24 @@
     .menu_item {
       margin-top: 0px;
     }
+  }
+}
+
+@media only screen and (max-width: 41.25rem) {
+  .menu {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    
+    // div + div{
+    //   margin-left: 2rem;
+    // }
+    // .menu_item{
+
+    //   a > svg{
+    //     width: 50px;
+    //   }
+
+    // }
   }
 }
